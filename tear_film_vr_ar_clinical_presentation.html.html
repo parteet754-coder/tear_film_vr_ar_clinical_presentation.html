@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tear Film Physiology Under Prolonged VR/AR Stress - SPA Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0284c7',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        tealbrand: {
+                            500: '#0d9488',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 620px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 360px;
+            }
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased custom-scrollbar relative">
+
+    <header class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur border-b border-slate-800 text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <span class="bg-sky-500 text-slate-950 px-2.5 py-1 rounded-lg text-xs font-black tracking-wider uppercase">Optometry Final Year Project</span>
+                <span class="font-bold text-sm sm:text-base text-slate-100 truncate max-w-xs sm:max-w-none">Tear Film VR/AR Stress Study</span>
+            </div>
+            <nav class="hidden xl:flex items-center space-x-4 text-xs uppercase font-semibold tracking-wider text-slate-300">
+                <a href="#intro" class="hover:text-sky-400 transition-colors">Intro</a>
+                <a href="#criteria" class="hover:text-sky-400 transition-colors">Criteria</a>
+                <a href="#tools" class="hover:text-sky-400 transition-colors">Tools</a>
+                <a href="#tests" class="hover:text-sky-400 transition-colors">Tests</a>
+                <a href="#flowchart" class="hover:text-sky-400 transition-colors">SOP Flowchart</a>
+                <a href="#mechanism" class="hover:text-sky-400 transition-colors">Mechanism</a>
+                <a href="#standards" class="hover:text-sky-400 transition-colors">Standards</a>
+                <a href="#results" class="hover:text-sky-400 transition-colors">Data Tables</a>
+                <a href="#visuals" class="hover:text-sky-400 transition-colors">Interactive Analytics</a>
+                <a href="#simulator" class="hover:text-sky-400 transition-colors">Simulator</a>
+                <a href="#discussion" class="hover:text-sky-400 transition-colors">Discussion</a>
+                <a href="#references" class="hover:text-sky-400 transition-colors">References</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="intro" class="bg-gradient-to-br from-slate-950 via-slate-900 to-sky-950 text-white py-12 md:py-16 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="inline-flex items-center space-x-2 bg-sky-500/10 border border-sky-500/30 text-sky-400 px-3 py-1 rounded-full text-xs font-medium mb-4">
+                <span>&#128300;</span>
+                <span>Clinical Optometry Research Project & Academic Defense Infographic</span>
+            </div>
+            <h1 class="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight mb-4">
+                Tear Film Physiology Under Prolonged VR/AR Stress
+            </h1>
+            <p class="text-base sm:text-lg text-slate-300 max-w-4xl leading-relaxed mb-8">
+                A quantitative clinical investigation into ocular surface microclimates, lipid layer phase transitions, microfluidic tear osmolarity shifts, and blink kinematics in university students during 40 minutes of continuous spatial computing exposure.
+            </p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mt-8">
+                <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-3.5 shadow-sm">
+                    <div class="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">NIBUT Breakup</div>
+                    <div class="text-xl sm:text-2xl font-black text-rose-400 mt-1">-29.8%</div>
+                    <div class="text-[11px] text-slate-300 mt-0.5">12.4s &#8594; 8.7s</div>
+                    <div class="text-[10px] text-teal-400 font-bold mt-1">P &lt; 0.001</div>
+                </div>
+                <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-3.5 shadow-sm">
+                    <div class="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">Tear Osmolarity</div>
+                    <div class="text-xl sm:text-2xl font-black text-amber-400 mt-1">+9.0 mOsm/L</div>
+                    <div class="text-[11px] text-slate-300 mt-0.5">296 &#8594; 305</div>
+                    <div class="text-[10px] text-teal-400 font-bold mt-1">P &lt; 0.05</div>
+                </div>
+                <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-3.5 shadow-sm">
+                    <div class="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">Corneal Temp</div>
+                    <div class="text-xl sm:text-2xl font-black text-sky-400 mt-1">+1.5 &deg;C</div>
+                    <div class="text-[11px] text-slate-300 mt-0.5">34.2 &deg;C &#8594; 35.7 &deg;C</div>
+                    <div class="text-[10px] text-teal-400 font-bold mt-1">P &lt; 0.05</div>
+                </div>
+                <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-3.5 shadow-sm">
+                    <div class="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">Lipid Grade</div>
+                    <div class="text-xl sm:text-2xl font-black text-teal-400 mt-1">+44.4%</div>
+                    <div class="text-[11px] text-slate-300 mt-0.5">1.8 &#8594; 2.6 Grade</div>
+                    <div class="text-[10px] text-teal-400 font-bold mt-1">P &lt; 0.01</div>
+                </div>
+                <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-3.5 shadow-sm">
+                    <div class="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">Incomplete Blinks</div>
+                    <div class="text-xl sm:text-2xl font-black text-rose-400 mt-1">+326.6%</div>
+                    <div class="text-[11px] text-slate-300 mt-0.5">15% &#8594; 64%</div>
+                    <div class="text-[10px] text-teal-400 font-bold mt-1">P &lt; 0.001</div>
+                </div>
+                <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-3.5 shadow-sm">
+                    <div class="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">OSDI Score</div>
+                    <div class="text-xl sm:text-2xl font-black text-indigo-400 mt-1">+145.9%</div>
+                    <div class="text-[11px] text-slate-300 mt-0.5">7.4 &#8594; 18.2 Points</div>
+                    <div class="text-[10px] text-teal-400 font-bold mt-1">P &lt; 0.001</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
+
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 md:p-8">
+            <div class="flex items-center space-x-3 mb-6">
+                <span class="bg-sky-100 text-sky-700 text-xs font-bold px-2.5 py-1 rounded-md uppercase">Section 1</span>
+                <h2 class="text-xl md:text-2xl font-bold text-slate-900">Study Rationale, Primary Aim & Hypotheses</h2>
+            </div>
+            <p class="text-slate-600 leading-relaxed mb-6">
+                Immersive Head-Mounted Displays (HMDs) and Augmented Reality (AR) smartglasses introduce unique optoelectronic, micro-environmental, and visual-ergonomic stresses not present in standard 2D flat screens. High cognitive processing demands paired with enclosed thermal dissipation alter pre-corneal tear film homeostasis, necessitating rigorous clinical trial quantification.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-slate-50 rounded-xl p-5 border border-slate-200">
+                    <div class="text-sky-600 font-bold text-sm uppercase mb-2">&#127919; Primary Research Aim</div>
+                    <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                        To systematically quantify the physiological, biochemical, thermal, and kinematic alterations occurring within the pre-corneal tear film following 40 minutes of continuous Virtual Reality headset immersion under high visual demand.
+                    </p>
+                </div>
+                <div class="bg-slate-50 rounded-xl p-5 border border-slate-200">
+                    <div class="text-teal-600 font-bold text-sm uppercase mb-2">&#9878; Alternate Hypothesis (H&#8321;)</div>
+                    <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                        Prolonged exposure to spatial computing displays induces statistically significant tear film breakup time reduction, tear hyperosmolarity, periocular thermal elevation, and incomplete blink frequency surges compared to baseline resting values.
+                    </p>
+                </div>
+                <div class="bg-slate-50 rounded-xl p-5 border border-slate-200">
+                    <div class="text-rose-600 font-bold text-sm uppercase mb-2">&#10008; Null Hypothesis (H&#8320;)</div>
+                    <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                        Continuous 40-minute VR headset immersion produces no statistically significant changes in tear film break-up time, lipid layer structure, tear osmolarity, corneal surface temperature, or subjective asthenopic symptoms.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 md:p-8">
+            <div class="flex items-center space-x-3 mb-4">
+                <span class="bg-sky-100 text-sky-700 text-xs font-bold px-2.5 py-1 rounded-md uppercase">Physiology</span>
+                <h2 class="text-xl md:text-2xl font-bold text-slate-900">Trilaminar Tear Film Structure & VR Interactions</h2>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                The pre-corneal tear film is an integrated three-layered biophysical shield essential for maintaining optical clarity and corneal cell vitality.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="border border-slate-200 rounded-xl p-5 bg-gradient-to-b from-amber-50/50 to-white">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="font-bold text-slate-900 text-base">1. Lipid Layer</span>
+                        <span class="text-xs font-bold text-amber-700 bg-amber-100 px-2 py-0.5 rounded">Outer (~42-100 nm)</span>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                        Secreted by tarsal meibomian glands. Composed of non-polar wax/sterol esters and polar phospholipids. Retards evaporation and stabilizes tear meniscus margins.
+                    </p>
+                    <div class="text-xs font-semibold text-amber-800 bg-amber-50 p-2.5 rounded border border-amber-200">
+                        &#9888; VR Impact: Headset thermal emission melts meibum, paradoxically increasing thickness grade while incomplete blinks prevent uniform distribution across the cornea.
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-xl p-5 bg-gradient-to-b from-sky-50/50 to-white">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="font-bold text-slate-900 text-base">2. Aqueous Layer</span>
+                        <span class="text-xs font-bold text-sky-700 bg-sky-100 px-2 py-0.5 rounded">Middle (~7 &mu;m)</span>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                        Secreted by main and accessory lacrimal glands. Contains electrolytes, immunoglobulins (IgA), lysozyme, lactoferrin, and growth factors to nourish avascular corneal cells.
+                    </p>
+                    <div class="text-xs font-semibold text-sky-800 bg-sky-50 p-2.5 rounded border border-sky-200">
+                        &#9888; VR Impact: Accelerated evaporation under reduced blink frequency concentrates solutes, causing an osmolarity shift from healthy 296 mOsm/L toward hyperosmolar stress.
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-xl p-5 bg-gradient-to-b from-teal-50/50 to-white">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="font-bold text-slate-900 text-base">3. Mucin Layer</span>
+                        <span class="text-xs font-bold text-teal-700 bg-teal-100 px-2 py-0.5 rounded">Inner (~0.2 &mu;m)</span>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                        Produced by conjunctival goblet cells and transmembrane epithelial glycocalyx mucins (MUC1, MUC4, MUC16). Hydrophilizes hydrophobic epithelial microvilli.
+                    </p>
+                    <div class="text-xs font-semibold text-teal-800 bg-teal-50 p-2.5 rounded border border-teal-200">
+                        &#9888; VR Impact: Depressed spontaneous blink rates lead to mucin coating breakdown, triggering localized dry spot formation and NIBUT collapse.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="criteria" class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 md:p-8">
+            <div class="flex items-center space-x-3 mb-6">
+                <span class="bg-sky-100 text-sky-700 text-xs font-bold px-2.5 py-1 rounded-md uppercase">Section 2</span>
+                <h2 class="text-xl md:text-2xl font-bold text-slate-900">Study Population & Eligibility Criteria</h2>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                A total cohort of 40 university student volunteers (20 male, 20 female; mean age 22.4 &plusmn; 2.1 years) was screened via purposive sampling to avoid age-related lacrimal gland atrophy or baseline meibomian dysfunction.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="border border-teal-200 rounded-xl p-6 bg-teal-50/30">
+                    <div class="flex items-center space-x-2 text-teal-800 font-bold text-lg mb-4">
+                        <span class="text-xl">&#10004;</span>
+                        <h3>Inclusion Criteria</h3>
+                    </div>
+                    <ul class="space-y-3 text-xs sm:text-sm text-slate-700">
+                        <li class="flex items-start space-x-2">
+                            <span class="text-teal-600 font-bold mt-0.5">&#9679;</span>
+                            <span><strong>Age Range:</strong> University students aged 18 to 29 years.</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <span class="text-teal-600 font-bold mt-0.5">&#9679;</span>
+                            <span><strong>Visual Acuity:</strong> Best-corrected visual acuity (BCVA) of 20/20 (LogMAR 0.0) in both eyes.</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <span class="text-teal-600 font-bold mt-0.5">&#9679;</span>
+                            <span><strong>Refractive Error:</strong> Spherical equivalent within -6.00 D to +2.00 D; astigmatism &le; 1.00 D.</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <span class="text-teal-600 font-bold mt-0.5">&#9679;</span>
+                            <span><strong>Baseline Tear Function:</strong> Normal tear film stability (NIBUT &gt; 10s, OSDI score &le; 12).</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <span class="text-teal-600 font-bold mt-0.5">&#9679;</span>
+                            <span><strong>Health Background:</strong> Healthy students with no neurological or systemic motor disorders.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="border border-rose-200 rounded-xl p-6 bg-rose-50/30">
+                    <div class="flex items-center space-x-2 text-rose-800 font-bold text-lg mb-4">
+                        <span class="text-xl">&#10008;</span>
+                        <h3>Exclusion Criteria</h3>
+                    </div>
+                    <ul class="space-y-3 text-xs sm:text-sm text-slate-700">
+                        <li class="flex items-start space-x-2">
+                            <span class="text-rose-600 font-bold mt-0.5">&#9679;</span>
+                            <span><strong>Pre-existing Ocular Disease:</strong> History of Dry Eye Disease (DED), meibomian gland dysfunction, or ocular rosacea.</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <span class="text-rose-600 font-bold mt-0.5">&#9679;</span>
+                            <span><strong>Corneal Surgery:</strong> Prior refractive procedures (LASIK, PRK, SMILE) interrupting corneal sensory loops.</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <span class="text-rose-600 font-bold mt-0.5">&#9679;</span>
+                            <span><strong>Contact Lens Wear:</strong> Active contact lens use within 30 days prior to testing.</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <span class="text-rose-600 font-bold mt-0.5">&#9679;</span>
+                            <span><strong>Pharmacological Agents:</strong> Systemic antihistamines, retinoids, or topical eye drops within 1 month.</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <span class="text-rose-600 font-bold mt-0.5">&#9679;</span>
+                            <span><strong>Eyelid Malposition:</strong> Lagophthalmos, ectropion, or incomplete voluntary blink anatomical anomalies.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="tools" class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 md:p-8">
+            <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center space-x-3">
+                    <span class="bg-sky-100 text-sky-700 text-xs font-bold px-2.5 py-1 rounded-md uppercase">Section 3</span>
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900">Clinical Instrumentation & Machinery</h2>
+                </div>
+                <span class="text-xs text-sky-600 font-semibold bg-sky-50 px-3 py-1 rounded-full border border-sky-200 hidden sm:inline-block">
+                    &#128070; Click any tool card for interactive specs & procedure modal
+                </span>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                A non-invasive diagnostic battery was utilized to capture precise physiological and thermal data without inducing reflex lacrimation.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div onclick="openToolModal('vr_hmd')" class="p-5 border border-slate-200 rounded-xl bg-slate-50 hover:bg-sky-50/50 hover:border-sky-400 cursor-pointer transition-all shadow-sm hover:shadow group">
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="text-xs font-bold text-sky-600 uppercase">Display System</span>
+                        <span class="text-xs text-sky-700 group-hover:underline font-semibold">Inspect Specs &rarr;</span>
+                    </div>
+                    <div class="font-bold text-slate-900 text-base mb-2">Spatial Computing VR Headset</div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Dual 2064 &times; 2208 high-resolution display panels with pancake optics, fixed optical focal plane (~1.3m), and enclosed facial foam cushion interface.
+                    </p>
+                </div>
+
+                <div onclick="openToolModal('keratograph')" class="p-5 border border-slate-200 rounded-xl bg-slate-50 hover:bg-sky-50/50 hover:border-sky-400 cursor-pointer transition-all shadow-sm hover:shadow group">
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="text-xs font-bold text-sky-600 uppercase">Topographer</span>
+                        <span class="text-xs text-sky-700 group-hover:underline font-semibold">Inspect Specs &rarr;</span>
+                    </div>
+                    <div class="font-bold text-slate-900 text-base mb-2">Oculus Keratograph 5M</div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Infrared Placido-disc ring illumination system capturing Non-Invasive Tear Break-Up Time (NIBUT) dynamics without fluorescein dye instillation.
+                    </p>
+                </div>
+
+                <div onclick="openToolModal('interferometer')" class="p-5 border border-slate-200 rounded-xl bg-slate-50 hover:bg-sky-50/50 hover:border-sky-400 cursor-pointer transition-all shadow-sm hover:shadow group">
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="text-xs font-bold text-sky-600 uppercase">Lipid Analyzer</span>
+                        <span class="text-xs text-sky-700 group-hover:underline font-semibold">Inspect Specs &rarr;</span>
+                    </div>
+                    <div class="font-bold text-slate-900 text-base mb-2">Optical Lipid Interferometer</div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        White light specular reflection system evaluating constructive and destructive light interference patterns to measure lipid layer thickness (nm).
+                    </p>
+                </div>
+
+                <div onclick="openToolModal('osmometer')" class="p-5 border border-slate-200 rounded-xl bg-slate-50 hover:bg-sky-50/50 hover:border-sky-400 cursor-pointer transition-all shadow-sm hover:shadow group">
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="text-xs font-bold text-sky-600 uppercase">Microfluidic Sensor</span>
+                        <span class="text-xs text-sky-700 group-hover:underline font-semibold">Inspect Specs &rarr;</span>
+                    </div>
+                    <div class="font-bold text-slate-900 text-base mb-2">TearLab Osmolarity System</div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Lab-on-a-chip bio-impedance system collecting a 50-nanoliter tear sample from the inferior lateral meniscus to quantify solute concentration (mOsm/L).
+                    </p>
+                </div>
+
+                <div onclick="openToolModal('mmp9')" class="p-5 border border-slate-200 rounded-xl bg-slate-50 hover:bg-sky-50/50 hover:border-sky-400 cursor-pointer transition-all shadow-sm hover:shadow group">
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="text-xs font-bold text-sky-600 uppercase">Inflammatory Biomarker</span>
+                        <span class="text-xs text-sky-700 group-hover:underline font-semibold">Inspect Specs &rarr;</span>
+                    </div>
+                    <div class="font-bold text-slate-900 text-base mb-2">InflammaDry MMP-9 Immunoassay</div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Rapid point-of-care direct antigen immunoassay detecting elevated levels (&ge;40 ng/mL) of Matrix Metalloproteinase-9 in palpebral conjunctival fluid.
+                    </p>
+                </div>
+
+                <div onclick="openToolModal('thermal_cam')" class="p-5 border border-slate-200 rounded-xl bg-slate-50 hover:bg-sky-50/50 hover:border-sky-400 cursor-pointer transition-all shadow-sm hover:shadow group">
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="text-xs font-bold text-sky-600 uppercase">IR Thermography</span>
+                        <span class="text-xs text-sky-700 group-hover:underline font-semibold">Inspect Specs &rarr;</span>
+                    </div>
+                    <div class="font-bold text-slate-900 text-base mb-2">FLIR Thermal Imaging Camera</div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        High-sensitivity uncooled thermal sensor measuring temperature changes (&deg;C) across the central cornea, periocular skin, and tarsal eyelids.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tests" class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 md:p-8">
+            <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center space-x-3">
+                    <span class="bg-sky-100 text-sky-700 text-xs font-bold px-2.5 py-1 rounded-md uppercase">Section 4</span>
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900">Required Clinical Diagnostic Tests Battery</h2>
+                </div>
+                <span class="text-xs text-teal-700 font-semibold bg-teal-50 px-3 py-1 rounded-full border border-teal-200 hidden sm:inline-block">
+                    &#128070; Click test card for clinical protocol & interpretation details
+                </span>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                Eight standardized ocular surface diagnostic tests were executed in precise order to evaluate kinetic, chemical, volumetric, and subjective parameters.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div onclick="openToolModal('test_nibut')" class="p-4 border border-slate-200 rounded-xl bg-slate-50 hover:bg-teal-50/50 hover:border-teal-400 cursor-pointer transition-all shadow-sm hover:shadow group">
+                    <div class="text-xs font-bold text-teal-600 uppercase mb-1">Test 1 &#8226; Stability</div>
+                    <div class="font-bold text-slate-900 text-sm mb-1">NIBUT Tear Break-Up</div>
+                    <p class="text-xs text-slate-500 leading-normal">Quantifies time to initial tear film distortion using Placido ring reflection video capture.</p>
+                </div>
+
+                <div onclick="openToolModal('test_lipid')" class="p-4 border border-slate-200 rounded-xl bg-slate-50 hover:bg-teal-50/50 hover:border-teal-400 cursor-pointer transition-all shadow-sm hover:shadow group">
+                    <div class="text-xs font-bold text-teal-600 uppercase mb-1">Test 2 &#8226; Lipid Structure</div>
+                    <div class="font-bold text-slate-900 text-sm mb-1">Interferometric Thickness</div>
+                    <p class="text-xs text-slate-500 leading-normal">Grades lipid fringe color patterns (Grade 1 thin to Grade 5 thick meibum layer).</p>
+                </div>
+
+                <div onclick="openToolModal('test_osmolar')" class="p-4 border border-slate-200 rounded-xl bg-slate-50 hover:bg-teal-50/50 hover:border-teal-400 cursor-pointer transition-all shadow-sm hover:shadow group">
+                    <div class="text-xs font-bold text-teal-600 uppercase mb-1">Test 3 &#8226; Biochemistry</div>
+                    <div class="font-bold text-slate-900 text-sm mb-1">Microfluidic Osmolarity</div>
+                    <p class="text-xs text-slate-500 leading-normal">Measures solute ionic concentration in nanoliter tear fluid samples.</p>
+                </div>
+
+                <div onclick="openToolModal('test_mmp9')" class="p-4 border border-slate-200 rounded-xl bg-slate-50 hover:bg-teal-50/50 hover:border-teal-400 cursor-pointer transition-all shadow-sm hover:shadow group">
+                    <div class="text-xs font-bold text-teal-600 uppercase mb-1">Test 4 &#8226; Inflammation</div>
+                    <div class="font-bold text-slate-900 text-sm mb-1">MMP-9 Antigen Immunoassay</div>
+                    <p class="text-xs text-slate-500 leading-normal">Detects tissue-degrading enzyme Matrix Metalloproteinase-9 in conjunctival fluid.</p>
+                </div>
+
+                <div onclick="openToolModal('test_thermo')" class="p-4 border border-slate-200 rounded-xl bg-slate-50 hover:bg-teal-50/50 hover:border-teal-400 cursor-pointer transition-all shadow-sm hover:shadow group">
+                    <div class="text-xs font-bold text-teal-600 uppercase mb-1">Test 5 &#8226; Thermal Mapping</div>
+                    <div class="font-bold text-slate-900 text-sm mb-1">Corneal Thermography</div>
+                    <p class="text-xs text-slate-500 leading-normal">Calculates thermal dissipation gradients across central cornea and eyelids.</p>
+                </div>
+
+                <div onclick="openToolModal('test_blink')" class="p-4 border border-slate-200 rounded-xl bg-slate-50 hover:bg-teal-50/50 hover:border-teal-400 cursor-pointer transition-all shadow-sm hover:shadow group">
+                    <div class="text-xs font-bold text-teal-600 uppercase mb-1">Test 6 &#8226; Kinematics</div>
+                    <div class="font-bold text-slate-900 text-sm mb-1">High-Speed Blink Tracking</div>
+                    <p class="text-xs text-slate-500 leading-normal">Tracks total blinks vs incomplete blinks (lid closure &lt;80%) over exposure timeline.</p>
+                </div>
+
+                <div onclick="openToolModal('test_osdi')" class="p-4 border border-slate-200 rounded-xl bg-slate-50 hover:bg-teal-50/50 hover:border-teal-400 cursor-pointer transition-all shadow-sm hover:shadow group">
+                    <div class="text-xs font-bold text-teal-600 uppercase mb-1">Test 7 &#8226; Symptoms</div>
+                    <div class="font-bold text-slate-900 text-sm mb-1">OSDI & Asthenopia Scale</div>
+                    <p class="text-xs text-slate-500 leading-normal">Evaluates visual discomfort, ocular fatigue, dryness, and accommodative strain.</p>
+                </div>
+
+                <div onclick="openToolModal('test_schirmer')" class="p-4 border border-slate-200 rounded-xl bg-slate-50 hover:bg-teal-50/50 hover:border-teal-400 cursor-pointer transition-all shadow-sm hover:shadow group">
+                    <div class="text-xs font-bold text-teal-600 uppercase mb-1">Test 8 &#8226; Aqueous Volume</div>
+                    <div class="font-bold text-slate-900 text-sm mb-1">Schirmer I & TMH Meniscus</div>
+                    <p class="text-xs text-slate-500 leading-normal">Measures total lacrimal secretory capacity and aqueous reservoir height in mm.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="flowchart" class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 md:p-8">
+            <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center space-x-3">
+                    <span class="bg-sky-100 text-sky-700 text-xs font-bold px-2.5 py-1 rounded-md uppercase">Section 5</span>
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900">Interactive Step-by-Step Experimental Procedure Flowchart</h2>
+                </div>
+                <span class="text-xs text-sky-600 font-semibold bg-sky-50 px-3 py-1 rounded-full border border-sky-200 hidden sm:inline-block">
+                    &#128070; Click any flowchart node for full clinical SOP & details
+                </span>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-8">
+                Trials were conducted inside an environmentally controlled clinical suite. Click each step node in the sequential pipeline below to view comprehensive Standard Operating Procedures (SOP), climate controls, calibration guidelines, and error-avoidance protocols.
+            </p>
+
+            <div class="relative max-w-5xl mx-auto py-4">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div onclick="openToolModal('step_1')" class="relative p-5 border-2 border-sky-200 hover:border-sky-500 rounded-2xl bg-gradient-to-b from-sky-50/60 to-white cursor-pointer transition-all shadow-sm hover:shadow-md group">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="bg-sky-600 text-white font-extrabold text-[10px] px-2.5 py-0.5 rounded-full uppercase">Step 01</span>
+                            <span class="text-slate-400 group-hover:text-sky-600 text-xs font-bold">15 Mins</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-sm mb-2 group-hover:text-sky-600">Environmental Acclimatization</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                            Subject rests in controlled climate chamber (22&deg;C, 40% RH, airflow &lt;0.1m/s) to establish physiological equilibrium.
+                        </p>
+                        <div class="text-[11px] font-bold text-sky-700 bg-sky-100/70 p-2 rounded-lg flex items-center justify-between">
+                            <span>Inspect SOP Details</span>
+                            <span>&#10140;</span>
+                        </div>
+                    </div>
+
+                    <div onclick="openToolModal('step_2')" class="relative p-5 border-2 border-sky-200 hover:border-sky-500 rounded-2xl bg-gradient-to-b from-sky-50/60 to-white cursor-pointer transition-all shadow-sm hover:shadow-md group">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="bg-sky-600 text-white font-extrabold text-[10px] px-2.5 py-0.5 rounded-full uppercase">Step 02</span>
+                            <span class="text-slate-400 group-hover:text-sky-600 text-xs font-bold">10 Mins</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-sm mb-2 group-hover:text-sky-600">Baseline Diagnostics</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                            8-test battery executed from non-invasive to invasive (OSDI &#8594; Osmolarity &#8594; IR Thermo &#8594; Interferometry &#8594; NIBUT).
+                        </p>
+                        <div class="text-[11px] font-bold text-sky-700 bg-sky-100/70 p-2 rounded-lg flex items-center justify-between">
+                            <span>Inspect SOP Details</span>
+                            <span>&#10140;</span>
+                        </div>
+                    </div>
+
+                    <div onclick="openToolModal('step_3')" class="relative p-5 border-2 border-sky-200 hover:border-sky-500 rounded-2xl bg-gradient-to-b from-sky-50/60 to-white cursor-pointer transition-all shadow-sm hover:shadow-md group">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="bg-sky-600 text-white font-extrabold text-[10px] px-2.5 py-0.5 rounded-full uppercase">Step 03</span>
+                            <span class="text-slate-400 group-hover:text-sky-600 text-xs font-bold">5 Mins</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-sm mb-2 group-hover:text-sky-600">HMD IPD Calibration</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                            VR headset hardware IPD aligned to anatomical interpupillary distance; facial foam seal verified.
+                        </p>
+                        <div class="text-[11px] font-bold text-sky-700 bg-sky-100/70 p-2 rounded-lg flex items-center justify-between">
+                            <span>Inspect SOP Details</span>
+                            <span>&#10140;</span>
+                        </div>
+                    </div>
+
+                    <div onclick="openToolModal('step_4')" class="relative p-5 border-2 border-teal-200 hover:border-teal-500 rounded-2xl bg-gradient-to-b from-teal-50/60 to-white cursor-pointer transition-all shadow-sm hover:shadow-md group">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="bg-teal-600 text-white font-extrabold text-[10px] px-2.5 py-0.5 rounded-full uppercase">Step 04</span>
+                            <span class="text-slate-400 group-hover:text-teal-600 text-xs font-bold">40 Mins</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-sm mb-2 group-hover:text-teal-600">Spatial Immersion & Tracking</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                            Subject engages in standardized 3D visual search while 240Hz IR camera tracks blink kinematics continuously.
+                        </p>
+                        <div class="text-[11px] font-bold text-teal-700 bg-teal-100/70 p-2 rounded-lg flex items-center justify-between">
+                            <span>Inspect SOP Details</span>
+                            <span>&#10140;</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-4">
+                    <div onclick="openToolModal('step_5')" class="relative p-5 border-2 border-rose-200 hover:border-rose-500 rounded-2xl bg-gradient-to-b from-rose-50/60 to-white cursor-pointer transition-all shadow-sm hover:shadow-md group">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="bg-rose-600 text-white font-extrabold text-[10px] px-2.5 py-0.5 rounded-full uppercase">Step 05</span>
+                            <span class="text-slate-400 group-hover:text-rose-600 text-xs font-bold">&lt; 10 Sec</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-sm mb-2 group-hover:text-rose-600">Immediate Removal & Thermal Capture</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                            Headset removed instantly; FLIR thermography captures periocular/corneal heat maps before ambient dissipation.
+                        </p>
+                        <div class="text-[11px] font-bold text-rose-700 bg-rose-100/70 p-2 rounded-lg flex items-center justify-between">
+                            <span>Inspect SOP Details</span>
+                            <span>&#10140;</span>
+                        </div>
+                    </div>
+
+                    <div onclick="openToolModal('step_6')" class="relative p-5 border-2 border-amber-200 hover:border-amber-500 rounded-2xl bg-gradient-to-b from-amber-50/60 to-white cursor-pointer transition-all shadow-sm hover:shadow-md group">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="bg-amber-600 text-white font-extrabold text-[10px] px-2.5 py-0.5 rounded-full uppercase">Step 06</span>
+                            <span class="text-slate-400 group-hover:text-amber-600 text-xs font-bold">10 Mins</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-sm mb-2 group-hover:text-amber-600">Post-Exposure Diagnostic Battery</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                            Immediate re-assessment of NIBUT, Lipid Interferometry, Tear Osmolarity, MMP-9, and Schirmer I test.
+                        </p>
+                        <div class="text-[11px] font-bold text-amber-700 bg-amber-100/70 p-2 rounded-lg flex items-center justify-between">
+                            <span>Inspect SOP Details</span>
+                            <span>&#10140;</span>
+                        </div>
+                    </div>
+
+                    <div onclick="openToolModal('step_7')" class="relative p-5 border-2 border-indigo-200 hover:border-indigo-500 rounded-2xl bg-gradient-to-b from-indigo-50/60 to-white cursor-pointer transition-all shadow-sm hover:shadow-md group">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="bg-indigo-600 text-white font-extrabold text-[10px] px-2.5 py-0.5 rounded-full uppercase">Step 07</span>
+                            <span class="text-slate-400 group-hover:text-indigo-600 text-xs font-bold">5 Mins</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-sm mb-2 group-hover:text-indigo-600">Symptom Scale Scoring</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                            Subject completes post-immersion OSDI questionnaire & visual analogue asthenopia scale.
+                        </p>
+                        <div class="text-[11px] font-bold text-indigo-700 bg-indigo-100/70 p-2 rounded-lg flex items-center justify-between">
+                            <span>Inspect SOP Details</span>
+                            <span>&#10140;</span>
+                        </div>
+                    </div>
+
+                    <div onclick="openToolModal('step_8')" class="relative p-5 border-2 border-slate-300 hover:border-slate-600 rounded-2xl bg-gradient-to-b from-slate-100 to-white cursor-pointer transition-all shadow-sm hover:shadow-md group">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="bg-slate-800 text-white font-extrabold text-[10px] px-2.5 py-0.5 rounded-full uppercase">Step 08</span>
+                            <span class="text-slate-400 group-hover:text-slate-800 text-xs font-bold">Post-Trial</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-sm mb-2 group-hover:text-slate-800">Statistical Analysis Pipeline</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                            Matched paired Wilcoxon signed-rank testing, regression modeling, and effect size calculation (N=40).
+                        </p>
+                        <div class="text-[11px] font-bold text-slate-800 bg-slate-200/70 p-2 rounded-lg flex items-center justify-between">
+                            <span>Inspect SOP Details</span>
+                            <span>&#10140;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mechanism" class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 md:p-8">
+            <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center space-x-3">
+                    <span class="bg-sky-100 text-sky-700 text-xs font-bold px-2.5 py-1 rounded-md uppercase">Section 6</span>
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900">Interactive Pathophysiological Mechanism Flowchart</h2>
+                </div>
+                <span class="text-xs text-sky-600 font-semibold bg-sky-50 px-3 py-1 rounded-full border border-sky-200 hidden sm:inline-block">
+                    &#128070; Click any mechanism node to inspect biomechanical pathways
+                </span>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-8">
+                This interactive pathway illustrates how enclosed VR hardware microclimates interact with central visual processing to induce the "Thermodynamic Paradox" and hyperosmolar ocular surface degradation.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-3 items-center">
+                <div onclick="openToolModal('mech_1')" class="p-4 border border-slate-200 rounded-xl bg-slate-50 hover:bg-sky-50 hover:border-sky-400 cursor-pointer transition-all shadow-sm text-center group">
+                    <div class="text-[10px] font-extrabold text-sky-600 uppercase mb-1">Trigger Phase</div>
+                    <div class="font-bold text-slate-900 text-xs mb-1 group-hover:text-sky-600">VR Spatial Immersion</div>
+                    <p class="text-[11px] text-slate-500">Enclosed facial foam seal + High visual cognitive load</p>
+                    <div class="mt-2 text-[10px] text-sky-700 font-bold">Inspect &#10140;</div>
+                </div>
+
+                <div class="hidden md:flex justify-center text-slate-300 font-bold text-lg">&#10142;</div>
+
+                <div onclick="openToolModal('mech_2')" class="p-4 border border-slate-200 rounded-xl bg-slate-50 hover:bg-amber-50 hover:border-amber-400 cursor-pointer transition-all shadow-sm text-center group">
+                    <div class="text-[10px] font-extrabold text-amber-600 uppercase mb-1">Dual Dual Pathways</div>
+                    <div class="font-bold text-slate-900 text-xs mb-1 group-hover:text-amber-600">Thermal + Blink Shift</div>
+                    <p class="text-[11px] text-slate-500">Display heat (+1.5&deg;C) vs Incomplete blink surge (64%)</p>
+                    <div class="mt-2 text-[10px] text-amber-700 font-bold">Inspect &#10140;</div>
+                </div>
+
+                <div class="hidden md:flex justify-center text-slate-300 font-bold text-lg">&#10142;</div>
+
+                <div onclick="openToolModal('mech_3')" class="p-4 border border-slate-200 rounded-xl bg-slate-50 hover:bg-rose-50 hover:border-rose-400 cursor-pointer transition-all shadow-sm text-center group">
+                    <div class="text-[10px] font-extrabold text-rose-600 uppercase mb-1">Tear Collapse</div>
+                    <div class="font-bold text-slate-900 text-xs mb-1 group-hover:text-rose-600">NIBUT Breakup & Osmolarity</div>
+                    <p class="text-[11px] text-slate-500">8.7s NIBUT collapse & +9 mOsm/L hyperosmolar surge</p>
+                    <div class="mt-2 text-[10px] text-rose-700 font-bold">Inspect &#10140;</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="standards" class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 md:p-8">
+            <div class="flex items-center space-x-3 mb-6">
+                <span class="bg-sky-100 text-sky-700 text-xs font-bold px-2.5 py-1 rounded-md uppercase">Section 7</span>
+                <h2 class="text-xl md:text-2xl font-bold text-slate-900">Diagnostic Parameters & Threshold Standards</h2>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                Parameters evaluated against international consensus standards set by the Tear Film & Ocular Surface Society (TFOS DEWS II Diagnostic Methodology Guidelines).
+            </p>
+
+            <div class="overflow-x-auto custom-scrollbar">
+                <table class="min-w-full text-left text-xs sm:text-sm border-collapse">
+                    <thead>
+                        <tr class="bg-slate-100 border-b border-slate-200 text-slate-700 font-bold uppercase">
+                            <th class="p-3">Diagnostic Modality</th>
+                            <th class="p-3">Parameter Measured</th>
+                            <th class="p-3">Normal Physiological Range</th>
+                            <th class="p-3">Pathological Cut-off Threshold</th>
+                            <th class="p-3">Clinical Relevance in VR</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200 text-slate-600">
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-3 font-semibold text-slate-900">OSDI Questionnaire</td>
+                            <td class="p-3">Asthenopia & Symptom Index (0-100)</td>
+                            <td class="p-3 text-teal-700 font-semibold">0 - 12 Points</td>
+                            <td class="p-3 text-rose-600 font-semibold">&gt; 13 (Mild) / &gt; 33 (Severe)</td>
+                            <td class="p-3">Tracks accommodative eye strain & sensory corneal dryness.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-3 font-semibold text-slate-900">Tear Osmolarity</td>
+                            <td class="p-3">Microfluidic Concentration (mOsm/L)</td>
+                            <td class="p-3 text-teal-700 font-semibold">&le; 308 mOsm/L</td>
+                            <td class="p-3 text-rose-600 font-semibold">&gt; 308 Mild / &gt; 316 Severe</td>
+                            <td class="p-3">Gold-standard biomarker for evaporative hyperosmolar stress.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-3 font-semibold text-slate-900">NIBUT (Keratograph)</td>
+                            <td class="p-3">Non-Invasive Break-Up Time (s)</td>
+                            <td class="p-3 text-teal-700 font-semibold">&gt; 10 seconds</td>
+                            <td class="p-3 text-rose-600 font-semibold">&lt; 10 Instability / &lt; 5 Severe</td>
+                            <td class="p-3">Measures functional tear film kinetic stability over time.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-3 font-semibold text-slate-900">Tear Meniscus Height</td>
+                            <td class="p-3">Aqueous Reservoir Height (mm)</td>
+                            <td class="p-3 text-teal-700 font-semibold">0.20 - 0.30 mm</td>
+                            <td class="p-3 text-rose-600 font-semibold">&lt; 0.20 mm (Aqueous Deficit)</td>
+                            <td class="p-3">Differentiates evaporative dry eye from aqueous lacrimal deficiency.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-3 font-semibold text-slate-900">Lipid Interferometry</td>
+                            <td class="p-3">Lipid Layer Thickness / Grade (1-5)</td>
+                            <td class="p-3 text-teal-700 font-semibold">&gt; 75 nm (Grade 1-2)</td>
+                            <td class="p-3 text-rose-600 font-semibold">&lt; 60 nm (Patchy/Deficient)</td>
+                            <td class="p-3">Headset thermal output melts meibum, raising structural grade.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-3 font-semibold text-slate-900">InflammaDry Immunoassay</td>
+                            <td class="p-3">MMP-9 Enzyme Concentration</td>
+                            <td class="p-3 text-teal-700 font-semibold">Negative (&lt; 40 ng/mL)</td>
+                            <td class="p-3 text-rose-600 font-semibold">Positive (&ge; 40 ng/mL)</td>
+                            <td class="p-3">Identifies corneal tissue breakdown & sub-clinical inflammation.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-3 font-semibold text-slate-900">Schirmer I Test</td>
+                            <td class="p-3">Total Tear Secretion Volume (mm/5m)</td>
+                            <td class="p-3 text-teal-700 font-semibold">&ge; 15 mm / 5 min</td>
+                            <td class="p-3 text-rose-600 font-semibold">&lt; 10 mm / 5 min</td>
+                            <td class="p-3">Evaluates baseline lacrimal secretory functional capacity.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="results" class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 md:p-8">
+            <div class="flex items-center space-x-3 mb-6">
+                <span class="bg-sky-100 text-sky-700 text-xs font-bold px-2.5 py-1 rounded-md uppercase">Section 8</span>
+                <h2 class="text-xl md:text-2xl font-bold text-slate-900">Empirical Results Data & Statistical Tables</h2>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                Non-parametric paired Wilcoxon signed-rank tests were performed on matched pre- and post-exposure data (N=40). Statistical significance threshold established at P &lt; 0.05.
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="border border-slate-200 rounded-xl p-5 bg-slate-50">
+                    <h3 class="font-bold text-slate-900 text-base mb-3">Table 1: Participant Baseline Demographics (N=40)</h3>
+                    <div class="overflow-x-auto custom-scrollbar">
+                        <table class="min-w-full text-left text-xs border-collapse">
+                            <thead>
+                                <tr class="border-b border-slate-300 text-slate-700 font-bold uppercase bg-slate-200/60">
+                                    <th class="p-2">Characteristic</th>
+                                    <th class="p-2">Minimum</th>
+                                    <th class="p-2">Maximum</th>
+                                    <th class="p-2">Mean</th>
+                                    <th class="p-2">Standard Dev (SD)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-200 text-slate-700">
+                                <tr>
+                                    <td class="p-2 font-semibold">Age (years)</td>
+                                    <td class="p-2">18</td>
+                                    <td class="p-2">29</td>
+                                    <td class="p-2 font-bold">22.4</td>
+                                    <td class="p-2">2.1</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-2 font-semibold">Refractive Error (SE, D)</td>
+                                    <td class="p-2">-5.75</td>
+                                    <td class="p-2">+1.50</td>
+                                    <td class="p-2 font-bold">-2.10</td>
+                                    <td class="p-2">1.85</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-2 font-semibold">Intraocular Pressure (mmHg)</td>
+                                    <td class="p-2">11</td>
+                                    <td class="p-2">18</td>
+                                    <td class="p-2 font-bold">14.3</td>
+                                    <td class="p-2">2.2</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-2 font-semibold">Baseline OSDI Score</td>
+                                    <td class="p-2">2</td>
+                                    <td class="p-2">12</td>
+                                    <td class="p-2 font-bold">7.4</td>
+                                    <td class="p-2">2.8</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-2 font-semibold">Gender Distribution</td>
+                                    <td class="p-2 font-bold text-sky-700" colspan="4">20 Male (50%) / 20 Female (50%)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-xl p-5 bg-slate-50">
+                    <h3 class="font-bold text-slate-900 text-base mb-3">Table 2: Clinical Parameter Changes (Pre vs Post 40m VR)</h3>
+                    <div class="overflow-x-auto custom-scrollbar">
+                        <table class="min-w-full text-left text-xs border-collapse">
+                            <thead>
+                                <tr class="border-b border-slate-300 text-slate-700 font-bold uppercase bg-slate-200/60">
+                                    <th class="p-2">Parameter</th>
+                                    <th class="p-2">Pre-VR (SD)</th>
+                                    <th class="p-2">Post-VR (SD)</th>
+                                    <th class="p-2">&Delta; Shift</th>
+                                    <th class="p-2">P-Value</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-200 text-slate-700">
+                                <tr>
+                                    <td class="p-2 font-semibold">Corneal Temp (&deg;C)</td>
+                                    <td class="p-2">34.2 (1.7)</td>
+                                    <td class="p-2">35.7 (2.2)</td>
+                                    <td class="p-2 text-sky-600 font-bold">+1.5</td>
+                                    <td class="p-2 text-teal-700 font-bold">&lt; 0.05</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-2 font-semibold">Upper Lid Temp (&deg;C)</td>
+                                    <td class="p-2">33.8 (1.5)</td>
+                                    <td class="p-2">35.9 (1.9)</td>
+                                    <td class="p-2 text-sky-600 font-bold">+2.1</td>
+                                    <td class="p-2 text-teal-700 font-bold">&lt; 0.05</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-2 font-semibold">Lipid Grade (1-5)</td>
+                                    <td class="p-2">1.8 (0.7)</td>
+                                    <td class="p-2">2.6 (0.6)</td>
+                                    <td class="p-2 text-teal-600 font-bold">+0.8</td>
+                                    <td class="p-2 text-teal-700 font-bold">&lt; 0.01</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-2 font-semibold">NIBUT (seconds)</td>
+                                    <td class="p-2">12.4 (2.8)</td>
+                                    <td class="p-2">8.7 (3.1)</td>
+                                    <td class="p-2 text-rose-600 font-bold">-3.7</td>
+                                    <td class="p-2 text-teal-700 font-bold">&lt; 0.01</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-2 font-semibold">Osmolarity (mOsm/L)</td>
+                                    <td class="p-2">296 (5.0)</td>
+                                    <td class="p-2">305 (7.0)</td>
+                                    <td class="p-2 text-amber-600 font-bold">+9.0</td>
+                                    <td class="p-2 text-teal-700 font-bold">&lt; 0.05</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-2 font-semibold">TMH Meniscus (mm)</td>
+                                    <td class="p-2">0.28 (0.10)</td>
+                                    <td class="p-2">0.27 (0.12)</td>
+                                    <td class="p-2 text-slate-500">-0.01</td>
+                                    <td class="p-2 text-slate-400">0.34 (NS)</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-2 font-semibold">Schirmer I (mm/5m)</td>
+                                    <td class="p-2">16.5 (3.2)</td>
+                                    <td class="p-2">15.9 (3.8)</td>
+                                    <td class="p-2 text-slate-500">-0.6</td>
+                                    <td class="p-2 text-slate-400">0.41 (NS)</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-2 font-semibold">OSDI Score (0-100)</td>
+                                    <td class="p-2">7.4 (2.8)</td>
+                                    <td class="p-2">18.2 (5.1)</td>
+                                    <td class="p-2 text-rose-600 font-bold">+10.8</td>
+                                    <td class="p-2 text-teal-700 font-bold">&lt; 0.001</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="visuals" class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 md:p-8">
+            <div class="flex items-center space-x-3 mb-2">
+                <span class="bg-sky-100 text-sky-700 text-xs font-bold px-2.5 py-1 rounded-md uppercase">Section 9</span>
+                <h2 class="text-xl md:text-2xl font-bold text-slate-900">Interactive Graphical Analytics Dashboard</h2>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                Click on any bar, line point, or dataset inside the charts to instantly reveal exact numerical values, standard deviations, percentage shifts, and clinical statistical interpretations in the Live Value Inspector below.
+            </p>
+
+            <div id="chartValueInspector" class="mb-6 p-4 bg-slate-900 text-white rounded-xl border border-slate-800 shadow-md flex flex-col sm:flex-row items-center justify-between transition-all">
+                <div class="flex items-center space-x-3 mb-2 sm:mb-0">
+                    <span class="bg-sky-500 text-slate-950 px-2 py-0.5 rounded text-[10px] font-black uppercase">Live Inspector</span>
+                    <span id="inspectorTitle" class="text-xs sm:text-sm font-bold text-sky-300">Click any chart data point to inspect exact optometry metrics</span>
+                </div>
+                <div id="inspectorMetrics" class="text-xs text-slate-300 font-mono flex items-center space-x-4">
+                    <span class="text-slate-400">Hover or click graph elements above</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="border border-slate-200 rounded-2xl p-5 bg-white shadow-sm flex flex-col">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-sky-600 uppercase">Figure 1 &#8226; Dual Axis Model</span>
+                        <h3 class="text-lg font-bold text-slate-900">The Thermodynamic Paradox (NIBUT vs. Lipid Grade)</h3>
+                        <p class="text-xs text-slate-500 mt-1">
+                            Demonstrates how lipid layer thickness increases due to headset thermal liquefaction while functional tear breakup time (NIBUT) collapses below pathological threshold (&lt;10s).
+                        </p>
+                    </div>
+                    <div class="chart-container my-auto">
+                        <canvas id="chartParadox"></canvas>
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-2xl p-5 bg-white shadow-sm flex flex-col">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-sky-600 uppercase">Figure 2 &#8226; Distribution Curve</span>
+                        <h3 class="text-lg font-bold text-slate-900">Tear Osmolarity Population Distribution Shift</h3>
+                        <p class="text-xs text-slate-500 mt-1">
+                            Plots the population curve right-shift from baseline healthy equilibrium (~296 mOsm/L) into the hyperosmolar stress zone (&gt;308 mOsm/L) following VR exposure.
+                        </p>
+                    </div>
+                    <div class="chart-container my-auto">
+                        <canvas id="chartOsmolarity"></canvas>
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-2xl p-5 bg-white shadow-sm flex flex-col">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-sky-600 uppercase">Figure 3 &#8226; Multidimensional Radar</span>
+                        <h3 class="text-lg font-bold text-slate-900">Normalized Ocular Biomarker Radar Profile</h3>
+                        <p class="text-xs text-slate-500 mt-1">
+                            Maps multidimensional changes across corneal temperature, lipid thickness, NIBUT stability, osmolarity stress, and subjective asthenopic discomfort.
+                        </p>
+                    </div>
+                    <div class="chart-container my-auto">
+                        <canvas id="chartRadar"></canvas>
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-2xl p-5 bg-white shadow-sm flex flex-col">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold text-sky-600 uppercase">Figure 4 &#8226; Kinetic Timeline</span>
+                        <h3 class="text-lg font-bold text-slate-900">Spontaneous Blink Rate vs. Incomplete Blink Surge</h3>
+                        <p class="text-xs text-slate-500 mt-1">
+                            Illustrates progressive cognitive depression of total blinks alongside a dramatic rise in incomplete lid closures over the 40-minute VR session.
+                        </p>
+                    </div>
+                    <div class="chart-container my-auto">
+                        <canvas id="chartBlinkKinematics"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="simulator" class="bg-gradient-to-br from-slate-900 to-sky-950 text-white rounded-2xl p-6 md:p-8 shadow-xl">
+            <div class="flex items-center space-x-3 mb-4">
+                <span class="bg-sky-500 text-slate-950 text-xs font-black px-2.5 py-1 rounded-md uppercase">Interactive Tool</span>
+                <h2 class="text-xl md:text-2xl font-bold">VR Exposure Duration & Paradox Simulator</h2>
+            </div>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
+                Adjust the exposure slider to simulate real-time physiological tear film responses based on empirical study regression modeling.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <div class="space-y-6 md:col-span-1 bg-slate-800/80 p-5 rounded-xl border border-slate-700">
+                    <div>
+                        <div class="flex justify-between text-xs font-bold mb-2">
+                            <span>VR Session Duration</span>
+                            <span id="sliderValText" class="text-sky-400 font-extrabold text-sm">40 Minutes</span>
+                        </div>
+                        <input id="simTimeSlider" type="range" min="0" max="60" value="40" step="5" class="w-full accent-sky-500 cursor-pointer">
+                    </div>
+
+                    <div class="space-y-3 text-xs">
+                        <div class="flex justify-between p-2 bg-slate-900/60 rounded">
+                            <span class="text-slate-400">Modeled Corneal Temp:</span>
+                            <span id="simTemp" class="font-bold text-sky-400">35.7 &deg;C</span>
+                        </div>
+                        <div class="flex justify-between p-2 bg-slate-900/60 rounded">
+                            <span class="text-slate-400">Modeled Lipid Thickness:</span>
+                            <span id="simLipid" class="font-bold text-teal-400">Grade 2.6</span>
+                        </div>
+                        <div class="flex justify-between p-2 bg-slate-900/60 rounded">
+                            <span class="text-slate-400">Modeled NIBUT Stability:</span>
+                            <span id="simNibut" class="font-bold text-rose-400">8.7 s</span>
+                        </div>
+                        <div class="flex justify-between p-2 bg-slate-900/60 rounded">
+                            <span class="text-slate-400">Modeled Tear Osmolarity:</span>
+                            <span id="simOsm" class="font-bold text-amber-400">305 mOsm/L</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-2 space-y-4">
+                    <div class="bg-slate-800/60 border border-slate-700/80 p-5 rounded-xl">
+                        <h4 class="font-bold text-sky-400 text-sm mb-2">&#128161; Simulated Ocular Surface Condition</h4>
+                        <p id="simStatusText" class="text-xs text-slate-300 leading-relaxed">
+                            At 40 minutes of continuous immersion, thermal melting of meibum increases lipid thickness grade to 2.6. However, severe cognitive blink suppression results in incomplete lid closure, leaving inferior cornea unlubricated. NIBUT drops to 8.7s (pathological instability) and tear osmolarity rises to 305 mOsm/L.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-slate-800/60 border border-slate-700/80 p-4 rounded-xl text-center">
+                            <span class="text-xs text-slate-400 uppercase font-bold block">Evaporative Threat Level</span>
+                            <span id="simRiskBadge" class="inline-block mt-2 px-3 py-1 bg-rose-500/20 text-rose-300 border border-rose-500/40 rounded-full text-xs font-bold">
+                                HIGH RISK
+                            </span>
+                        </div>
+                        <div class="bg-slate-800/60 border border-slate-700/80 p-4 rounded-xl text-center">
+                            <span class="text-xs text-slate-400 uppercase font-bold block">Incomplete Blink Ratio</span>
+                            <span id="simBlinkRatio" class="inline-block mt-2 px-3 py-1 bg-amber-500/20 text-amber-300 border border-amber-500/40 rounded-full text-xs font-bold">
+                                64% Incomplete
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="discussion" class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 md:p-8">
+            <div class="flex items-center space-x-3 mb-6">
+                <span class="bg-sky-100 text-sky-700 text-xs font-bold px-2.5 py-1 rounded-md uppercase">Section 10</span>
+                <h2 class="text-xl md:text-2xl font-bold text-slate-900">Clinical Discussion & Mechanistic Analysis</h2>
+            </div>
+
+            <div class="space-y-6 text-sm text-slate-700 leading-relaxed">
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                    <h3 class="font-bold text-slate-900 text-base mb-2 text-sky-700">1. Decoding the "Thermodynamic Paradox"</h3>
+                    <p class="mb-3">
+                        In traditional 2D display strain, dry eye symptoms are driven by meibomian gland stagnation and lipid layer thinning. In spatial VR computing, enclosed headset designs create a microclimate where internal displays and onboard microprocessors release operational heat directly into the periocular chamber. This elevates corneal surface temperature by +1.5 &deg;C and upper eyelid temperature by +2.1 &deg;C.
+                    </p>
+                    <p>
+                        Human meibum transitions from solid to liquid phase between 32 &deg;C and 34 &deg;C. Consequently, headset microclimatic warming acts as an unintentional warm compress, melting meibum and elevating interferometric lipid grade from 1.8 to 2.6. However, despite this thicker lipid coating, NIBUT plummets from 12.4s to 8.7s. This proves that eyelid kinematic failure (incomplete blinks spiking to 64%) overrides lipid layer thickness.
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                    <h3 class="font-bold text-slate-900 text-base mb-2 text-sky-700">2. Vergence-Accommodation Conflict (VAC) & Asthenopic Strain</h3>
+                    <p class="mb-3">
+                        Natural vision reflexively couples ocular vergence (eye rotation) with accommodative focus (lens shaping) to identical physical distances. Stereoscopic VR displays break this coupling: extraocular muscles dynamically converge and diverge to track stereoscopic 3D depth cues while ciliary muscles remain locked to the headset fixed optical plane (~1.3m).
+                    </p>
+                    <p>
+                        This persistent physiological mismatch triggers continuous ciliary muscle microfluctuations, driving visual asthenopia (reflected in the OSDI score surge from 7.4 to 18.2) and disrupting parasympathetic pathways regulating spontaneous blink reflex timing.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+                    <div class="p-5 border border-slate-200 rounded-xl bg-slate-50">
+                        <div class="font-bold text-slate-900 text-base mb-2 text-indigo-700">&#129533; VR Enclosed Headsets</div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Enclosed facial foam interface traps thermal energy, providing incidental meibum liquefaction. However, high cognitive visual demand depresses blink frequency, accelerating hyperosmolar stress.
+                        </p>
+                    </div>
+                    <div class="p-5 border border-slate-200 rounded-xl bg-slate-50">
+                        <div class="font-bold text-slate-900 text-base mb-2 text-teal-700">&#128083; AR Open Smartglasses</div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Open-air design lacks periocular thermal trapping, eliminating beneficial lipid melting while imposing identical cognitive blink suppression, potentially accelerating dry spot formation faster than VR.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-sky-50 border border-sky-200 p-5 rounded-xl text-sky-900">
+                    <h4 class="font-bold text-sm mb-2 text-sky-800">&#128736; Next-Generation Engineering & Ergonomic Remedies</h4>
+                    <ul class="list-disc list-inside text-xs space-y-2">
+                        <li class="leading-relaxed"><strong>Hardware Level:</strong> Incorporate micro-ventilation active air channels and piezoelectric humidification modules into facial interface cushions.</li>
+                        <li class="leading-relaxed"><strong>Optical Level:</strong> Implement dynamic varifocal optical stacks or liquid-crystal adaptive lenses to resolve Vergence-Accommodation Conflict.</li>
+                        <li class="leading-relaxed"><strong>Software Level:</strong> Integrate real-time gaze-tracking blink prompts and automated rest interval reminders into spatial operating systems.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 md:p-8">
+            <div class="flex items-center space-x-3 mb-4">
+                <span class="bg-sky-100 text-sky-700 text-xs font-bold px-2.5 py-1 rounded-md uppercase">Section 11</span>
+                <h2 class="text-xl md:text-2xl font-bold text-slate-900">Clinical Conclusions & Defense Summary</h2>
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed mb-4">
+                Sustained Virtual Reality headset usage induces a distinct state of digital ocular surface stress:
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                    <span class="font-bold text-slate-900 block mb-1">1. Blink Kinematics Overrides Thermal Benefit</span>
+                    <span class="text-slate-600">Headset thermal emission liquefies meibum and increases lipid grade, but blink suppression prevents distribution, causing tear breakup time collapse (NIBUT drop to 8.7s).</span>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                    <span class="font-bold text-slate-900 block mb-1">2. Hyperosmolar Stress & Asthenopia</span>
+                    <span class="text-slate-600">Elevated tear osmolarity (+9.0 mOsm/L shift) and increased OSDI scores (+10.8 point surge) confirm early evaporative dry eye strain under spatial computing loads.</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="references" class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 md:p-8">
+            <div class="flex items-center space-x-3 mb-6">
+                <span class="bg-sky-100 text-sky-700 text-xs font-bold px-2.5 py-1 rounded-md uppercase">Bibliography</span>
+                <h2 class="text-xl md:text-2xl font-bold text-slate-900">Mother Articles & Scientific References</h2>
+            </div>
+
+            <ol class="list-decimal list-inside space-y-3 text-xs text-slate-600 leading-relaxed">
+                <li class="pl-2">
+                    <span class="font-semibold text-slate-900">TFOS DEWS II Management and Therapy Report.</span> Craig, J. P., et al. <em>The Ocular Surface</em>, 15(3), 575-628 (2017).
+                </li>
+                <li class="pl-2">
+                    <span class="font-semibold text-slate-900">Ocular surface dynamics and tear film stability in virtual reality display users.</span> Turnbull, P. R., et al. <em>Clinical & Experimental Optometry</em>, 104(4), 489-497 (2021).
+                </li>
+                <li class="pl-2">
+                    <span class="font-semibold text-slate-900">Impact of digital visual display terminals on blink rate and incomplete blinks.</span> Portello, J. K., Rosenfield, M., & Chu, C. A. <em>Ophthalmic and Physiological Optics</em>, 33(3), 288-294 (2013).
+                </li>
+                <li class="pl-2">
+                    <span class="font-semibold text-slate-900">Vergence-accommodation conflict in stereoscopic displays: A review of physiological mechanisms.</span> Hoffmann, D. M., Girshick, A. R., Akeley, K., & Banks, M. S. <em>Journal of Vision</em>, 8(3), 33-33 (2008).
+                </li>
+                <li class="pl-2">
+                    <span class="font-semibold text-slate-900">Tear film osmolarity and dry eye disease: TFOS DEWS II Diagnostic Methodology Report.</span> Wolffsohn, J. S., et al. <em>The Ocular Surface</em>, 15(3), 539-574 (2017).
+                </li>
+                <li class="pl-2">
+                    <span class="font-semibold text-slate-900">Eye-hand coordination and visuomotor performance among university students.</span> Irem, N., & Mohammad, A. <em>Saudi Journal of Sports Medicine</em>, 20(3), 65-68 (2020).
+                </li>
+            </ol>
+        </section>
+
+    </main>
+
+    <div id="toolModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto custom-scrollbar shadow-2xl border border-slate-200">
+            <div class="sticky top-0 bg-slate-900 text-white p-5 flex justify-between items-center rounded-t-2xl border-b border-slate-800">
+                <div>
+                    <span id="modalCategory" class="text-xs font-bold text-sky-400 uppercase tracking-wider block">Clinical Specification</span>
+                    <h3 id="modalTitle" class="text-lg font-bold">Tool Title</h3>
+                </div>
+                <button onclick="closeToolModal()" class="text-slate-400 hover:text-white bg-slate-800 hover:bg-slate-700 w-8 h-8 rounded-full flex items-center justify-center font-bold text-lg">&times;</button>
+            </div>
+            <div class="p-6 space-y-5 text-xs sm:text-sm text-slate-700">
+                <div>
+                    <h4 class="font-bold text-sky-700 uppercase text-xs mb-1">&#128736; Technical Specifications & Operating Guidelines</h4>
+                    <p id="modalSpecs" class="bg-slate-50 p-3 rounded-lg border border-slate-200 leading-relaxed text-slate-800 font-mono text-xs">Technical details...</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sky-700 uppercase text-xs mb-1">&#128203; Standard Operating Procedure (SOP) & Clinical Protocol</h4>
+                    <p id="modalProtocol" class="leading-relaxed bg-sky-50/40 p-3 rounded-lg border border-sky-100">Protocol steps...</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sky-700 uppercase text-xs mb-1">&#9878; Diagnostic & Biological Mechanism</h4>
+                    <p id="modalMechanism" class="leading-relaxed">Biological mechanism...</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sky-700 uppercase text-xs mb-1">&#127919; Optometric Final Year Project Relevance & Interpretation</h4>
+                    <p id="modalRelevance" class="bg-sky-50/70 p-3 rounded-lg border border-sky-200 leading-relaxed text-sky-950 font-medium">Relevance details...</p>
+                </div>
+            </div>
+            <div class="p-4 bg-slate-100 border-t border-slate-200 text-right rounded-b-2xl">
+                <button onclick="closeToolModal()" class="bg-sky-600 hover:bg-sky-700 text-white font-bold text-xs px-5 py-2 rounded-lg transition-colors">Close Detailed Inspection</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-slate-950 text-slate-400 py-8 border-t border-slate-800 text-center text-xs">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="font-semibold text-slate-300 mb-2">Clinical Single-Page Application Presentation &#8226; Tear Film VR/AR Stress Study</p>
+            <p>&copy; 2026 Academic Optometry Research Presentation. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const toolDetailsData = {
+            vr_hmd: {
+                category: "Display Machinery System",
+                title: "Spatial Computing VR Head-Mounted Display",
+                specs: "Resolution: 2064 x 2208 pixels per eye | Optics: Dual Pancake Lenses | Refresh Rate: 120Hz | Field of View: 110 degrees | Focal Plane: Fixed ~1.3 meters | Thermal Output: ~38.5 deg C internal display panel dissipation.",
+                protocol: "Adjust hardware IPD to participant anatomical interpupillary distance. Secure facial foam cushion snug against periocular skin without compression of supraorbital nerves. Run standardized 3D visuomotor search task for 40 minutes continuous duration.",
+                mechanism: "Creates an enclosed microclimatic chamber trapping radiant display panel heat and facial perspiration, elevating periocular ambient temperature and modifying tear film surface physics.",
+                relevance: "Primary stressor inducing both thermal liquefaction of meibomian lipids and cognitive blink suppression under spatial visual demand."
+            },
+            keratograph: {
+                category: "Corneal Topographer",
+                title: "Oculus Keratograph 5M",
+                specs: "Illumination: 880nm Infrared LED ring pattern | Ring Count: 32 Placido rings | Data Points: 22,000 continuous points | Video Frame Rate: 32 fps | Measurement Resolution: 0.1 seconds.",
+                protocol: "Subject fixates on central red target without blinking following a complete blink. Infrared Placido rings are projected onto the pre-corneal tear film. System automatically tracks grid distortions until tear breakup occurs.",
+                mechanism: "Specular reflection of Placido rings off the anterior tear-air interface. Disruption in ring pattern continuity marks local film breakup without invasive dye instillation.",
+                relevance: "Measures Non-Invasive Tear Break-Up Time (NIBUT) first break location and average breakup time, serving as the core metric of functional tear stability."
+            },
+            interferometer: {
+                category: "Interferometric Analyzer",
+                title: "Optical Lipid Layer Interferometer",
+                specs: "Light Source: Broad-spectrum white light LED | Thickness Measurement Range: 15 to 100 nanometers | Grading Scale: ICAL System (Grade 1 Thin to Grade 5 Thick) | Imaging Resolution: High-definition optical sensor.",
+                protocol: "Position subject at chin-rest with eyes open in normal posture. Focus specular white light beam on central pre-corneal tear layer. Observe constructive and destructive light interference fringe patterns.",
+                mechanism: "Light reflected from top of lipid film interferes with light reflected from lipid-aqueous interface. Color spectral fringes correlate directly with lipid layer nanometer thickness.",
+                relevance: "Quantifies the paradoxical increase in meibum liquefaction and lipid layer grade induced by headset thermal emission."
+            },
+            osmometer: {
+                category: "Microfluidic Sensor",
+                title: "TearLab Osmolarity System",
+                specs: "Sample Volume Required: 50 nanoliters | Bio-impedance Chip: Nanofluidic capillary channel | Precision: +/- 1.5 mOsm/L | Measurement Range: 270 to 400 mOsm/L | Test Duration: < 10 seconds.",
+                protocol: "Touch microfluidic card tip gently to inferior lateral meniscus tear strip without contacting conjunctival tissue. Micro-capillary action draws 50nL tear fluid automatically. Card is dock-analyzed instantly.",
+                mechanism: "Measures electrical impedance of collected tear fluid, converting ionic activity directly to solute osmolarity in milliosmoles per liter (mOsm/L).",
+                relevance: "Gold-standard biomarker capturing evaporative water loss and hyperosmolar stress on the ocular surface."
+            },
+            mmp9: {
+                category: "Point-of-Care Immunoassay",
+                title: "InflammaDry MMP-9 Immunoassay",
+                specs: "Target Enzyme: Matrix Metalloproteinase-9 | Diagnostic Cut-off Threshold: 40 ng/mL | Assay Type: Direct antigen lateral flow immunoassay | Time to Result: 10 minutes.",
+                protocol: "Dab sampling fleece gently along palpebral conjunctiva 6-8 times until saturated. Snap fleece into test cassette body and immerse absorbent tip into buffer solution for 20 seconds. Read pink line at 10 minutes.",
+                mechanism: "Monoclonal antibodies bind MMP-9 enzyme molecules, producing a visible pink test line if MMP-9 concentration equals or exceeds 40 ng/mL.",
+                relevance: "Identifies corneal epithelial cellular stress and chronic sub-clinical inflammatory response triggered by dry spots."
+            },
+            thermal_cam: {
+                category: "IR Thermography",
+                title: "FLIR High-Resolution Thermal Imaging Camera",
+                specs: "Thermal Sensitivity: < 50 mK | Infrared Sensor: 320 x 240 uncooled microbolometer | Spectral Range: 7.5 to 13 micrometers | Temperature Precision: +/- 0.1 deg C.",
+                protocol: "Position thermal camera 30cm from participant face. Capture infrared radiometric thermal map instantly upon VR headset removal within < 10 seconds before ambient heat dissipation.",
+                mechanism: "Detects long-wave infrared radiation naturally emitted from human tissue, translating radiant energy into calibrated surface temperature values.",
+                relevance: "Proves periocular and corneal thermal warming (+1.5 to +2.1 deg C) induced by internal VR display panel heat."
+            },
+            test_nibut: {
+                category: "Diagnostic Test Protocol",
+                title: "Test 1: Non-Invasive Tear Break-Up Time (NIBUT)",
+                specs: "Primary Tool: Oculus Keratograph 5M | Normal Cut-off: > 10 seconds | Pathological Cut-off: < 10 seconds | Sequence Position: Step 5 in baseline/post battery.",
+                protocol: "Participant blinks twice naturally, then holds eyes wide open. Infrared ring grid records film reflection continuous video until first ring distortion appears.",
+                mechanism: "Detects localized tear film thinning and mucin layer exposure driven by evaporation and incomplete blinking.",
+                relevance: "In our study, NIBUT dropped by 29.8% (12.4s down to 8.7s), signaling pathological tear destabilization."
+            },
+            test_lipid: {
+                category: "Diagnostic Test Protocol",
+                title: "Test 2: Optical Lipid Layer Interferometry",
+                specs: "Primary Tool: Specular White Light Interferometer | Scale: Grade 1 (Thin/Patchy) to Grade 5 (Thick/Amorphous) | Sequence Position: Step 4 in battery.",
+                protocol: "Subject fixates forward under specular white light beam. Interference fringe color maps (marmoreal, wave, or amorphous patterns) are recorded and graded.",
+                mechanism: "Light wave interference fringes directly measure lipid thickness in nanometers across the central corneal region.",
+                relevance: "Revealed a paradoxical lipid thickness increase from Grade 1.8 to 2.6 due to headset heat melting meibomian wax esters."
+            },
+            test_osmolar: {
+                category: "Diagnostic Test Protocol",
+                title: "Test 3: Microfluidic Tear Osmolarity Analysis",
+                specs: "Primary Tool: TearLab Osmometer | Normal Value: <= 308 mOsm/L | Pathological Cut-off: > 308 mOsm/L | Sequence Position: Step 2 in battery.",
+                protocol: "Microfluidic chip collect 50nL tear sample from inferior lateral meniscus. Bio-impedance reader measures solute concentration within 10 seconds.",
+                mechanism: "Solute concentration rises as aqueous fluid evaporates off the corneal surface under reduced blink frequency.",
+                relevance: "Showed a statistically significant +9.0 mOsm/L shift (296 up to 305 mOsm/L), pushing participants toward hyperosmolar stress."
+            },
+            test_mmp9: {
+                category: "Diagnostic Test Protocol",
+                title: "Test 4: MMP-9 Inflammatory Immunoassay",
+                specs: "Primary Tool: InflammaDry Cassette | Sensitivity: 40 ng/mL | Diagnostic Output: Positive / Negative | Sequence Position: Step 6 in battery.",
+                protocol: "Palpebral conjunctival fleece sampling followed by 10-minute buffer lateral flow assay development.",
+                mechanism: "Detects Matrix Metalloproteinase-9, a proteolytic enzyme secreted by stressed corneal epithelial cells.",
+                relevance: "Assesses sub-clinical tissue degradation resulting from persistent hyperosmolarity and dry spot friction."
+            },
+            test_thermo: {
+                category: "Diagnostic Test Protocol",
+                title: "Test 5: Ocular Surface IR Thermography",
+                specs: "Primary Tool: FLIR Thermal Camera | Measurement Zones: Central Cornea, Upper Lid, Lower Lid | Sequence Position: Step 3 in battery.",
+                protocol: "Infrared radiometric image captured within 10 seconds post-headset removal. Software measures region-of-interest mean temperatures.",
+                mechanism: "Quantifies thermal heat transfer from display electronics and facial cushion enclosure onto the eye.",
+                relevance: "Documented significant thermal elevation (+1.5 deg C corneal, +2.1 deg C upper lid) triggering meibum liquefaction."
+            },
+            test_blink: {
+                category: "Diagnostic Test Protocol",
+                title: "Test 6: High-Speed Video Blink Kinematics",
+                specs: "Primary Tool: Infrared Eye Tracker Camera | Metrics: Total Blinks/min, Incomplete Blink Ratio (%) | Sequence Position: Continuous intra-exposure monitoring.",
+                protocol: "240Hz infrared video tracking captures eyelid travel distance during exposure session. Blinks closing < 80% lid distance logged as incomplete.",
+                mechanism: "High cognitive visual demand inhibits spontaneous blink reflex centers in the central nervous system.",
+                relevance: "Demonstrated a shift from 15% baseline incomplete blinks up to 64% incomplete blinks at 40 minutes exposure."
+            },
+            test_osdi: {
+                category: "Diagnostic Test Protocol",
+                title: "Test 7: OSDI Questionnaire & Asthenopia Scale",
+                specs: "Primary Tool: 12-Item OSDI + Visual Analogue Scale | Range: 0 to 100 Points | Sequence Position: Step 1 in battery.",
+                protocol: "Participant completes standard symptom questionnaire evaluating eye grittiness, pain, light sensitivity, and visual fatigue.",
+                mechanism: "Quantifies sensory nerve signaling and accommodative muscle fatigue experienced subjectively.",
+                relevance: "OSDI scores surged by +10.8 points (7.4 to 18.2), indicating moderate subjective digital asthenopia."
+            },
+            test_schirmer: {
+                category: "Diagnostic Test Protocol",
+                title: "Test 8: Schirmer I Test & Tear Meniscus Height",
+                specs: "Primary Tool: Whatman #41 Strips & Optical Meniscus Caliper | Normal Range: > 15mm / 0.25mm TMH | Sequence Position: Final step in battery.",
+                protocol: "Filter paper strip placed in outer lower eyelid for 5 minutes without local anesthesia. Wetting length read in mm. TMH measured digitally.",
+                mechanism: "Evaluates main lacrimal gland basal aqueous tear secretion capacity and inferior meniscus volume reserve.",
+                relevance: "Showed no significant change (16.5 down to 15.9 mm), confirming that VR strain is primary evaporative, not aqueous deficient."
+            },
+            step_1: {
+                category: "Standard Operating Procedure (SOP) Step 01",
+                title: "Environmental Acclimatization & Suite Control Protocol",
+                specs: "Temperature Target: 22.0 deg C (+/- 0.5 deg C) | Relative Humidity: 40.0% (+/- 2.0%) | Laminar Airflow: Air velocity < 0.08 m/s | Ambient Illumination: 150 Lux dark-adapted.",
+                protocol: "1. Escort participant into climate-controlled clinical suite. 2. Verify participant has rest comfortably in chin-rest position for 15 minutes. 3. Ensure no local air conditioning drafts blow directly toward subject's face. 4. Confirm no contact lens insertion or topical eye drops used in last 30 days.",
+                mechanism: "Normalizes corneal temperature and baseline evaporation rates across all subjects before testing.",
+                relevance: "Critical experimental control preventing external environmental humidity or room drafts from confounding tear evaporation measurements."
+            },
+            step_2: {
+                category: "Standard Operating Procedure (SOP) Step 02",
+                title: "Baseline Clinical Diagnostic Sequence Execution",
+                specs: "Battery Sequence: Non-invasive to invasive | Order: 1. OSDI -> 2. Tear Osmolarity -> 3. IR Thermography -> 4. Lipid Interferometry -> 5. NIBUT -> 6. MMP-9 -> 7. Schirmer I.",
+                protocol: "1. Administer 12-item OSDI survey. 2. Collect 50nL tear sample for bio-impedance osmolarity. 3. Capture baseline FLIR radiometric heat image. 4. Record white-light specular lipid fringe patterns. 5. Perform Placido ring NIBUT video capture. 6. Sample palpebral conjunctiva for MMP-9. 7. Insert Schirmer I strip for 5 minutes.",
+                mechanism: "Strict order prevents invasive diagnostic procedures (like Schirmer strip) from inducing reflex tearing that corrupts osmolarity and NIBUT data.",
+                relevance: "Establishes reference physiological baseline values (Mean NIBUT 12.4s, Osmolarity 296 mOsm/L, Lipid Grade 1.8)."
+            },
+            step_3: {
+                category: "Standard Operating Procedure (SOP) Step 03",
+                title: "Spatial Computing VR Headset & Optical Calibration",
+                specs: "Device: Meta Quest 3 / Vision Pro Architecture | IPD Range: 58-72mm manual slider | Display Focal Distance: Fixed ~1.3m optical infinity plane.",
+                protocol: "1. Measure participant interpupillary distance (IPD) using digital pupilometer. 2. Adjust physical gear wheel on headset to match subject IPD precisely. 3. Fit optical facial cushion snug against periocular skin. 4. Check for light leakage around nose bridge.",
+                mechanism: "Ensures optical center alignment to avoid induced prismatic effect or off-axis vergence distortion during immersion.",
+                relevance: "Guarantees consistent thermal facial cushion trapping and optical vergence demand across all 40 participants."
+            },
+            step_4: {
+                category: "Standard Operating Procedure (SOP) Step 04",
+                title: "Continuous 40-Minute Spatial VR Immersion Task",
+                specs: "Visual Demand Task: Interactive 3D spatial target search & object manipulation | Frame Rate: 120 FPS | Blink Tracking: 240Hz IR video sensor.",
+                protocol: "1. Initiate standardized 40-minute spatial immersion environment. 2. Continuous cognitive visual load maintained via adaptive difficulty search tasks. 3. Real-time infrared video camera logs spontaneous total blinks and incomplete lid closures (>20% aperture remaining).",
+                mechanism: "High cognitive visual processing depresses central nervous system spontaneous blink generators, reducing blink frequency and full lid contact.",
+                relevance: "Drives the experimental stressor, causing a surge in incomplete blinks from 15% up to 64%."
+            },
+            step_5: {
+                category: "Standard Operating Procedure (SOP) Step 05",
+                title: "Rapid Headset Removal & Post-Exposure Thermal Imaging",
+                specs: "FLIR IR Thermal Camera | Distance: 30cm fixed distance | Capture Window: < 10 seconds post-removal | ROI: Central Cornea & Upper Eyelid.",
+                protocol: "1. At minute 40:00, immediately unstrap and lift HMD headset. 2. Position participant instantly in chin rest facing FLIR thermal sensor. 3. Trigger infrared radiometric image within 5-10 seconds maximum before ocular heat dissipates into ambient room air.",
+                mechanism: "Captures true microclimatic thermal elevation inside headset chamber prior to ambient air cooling.",
+                relevance: "Documented significant thermal increase (+1.5 deg C central cornea, +2.1 deg C upper lid) proving the display panel warming effect."
+            },
+            step_6: {
+                category: "Standard Operating Procedure (SOP) Step 06",
+                title: "Post-Exposure Ocular Surface Re-Assessment Battery",
+                specs: "Sequence: Matched baseline sequence | Target Metrics: NIBUT, Lipid Grade, Osmolarity, MMP-9, Tear Meniscus Height.",
+                protocol: "1. Instantly repeat TearLab Osmolarity 50nL sample collection. 2. Execute Oculus Keratograph NIBUT video capture. 3. Record lipid fringe pattern grade. 4. Measure inferior tear meniscus height (TMH). 5. Develop InflammaDry cassette.",
+                mechanism: "Quantifies immediate post-immersion shifts in tear stability, lipid phase state, and microfluidic concentration.",
+                relevance: "Captured the core finding: NIBUT collapse to 8.7s (-29.8%) and osmolarity surge to 305 mOsm/L (+9 mOsm/L)."
+            },
+            step_7: {
+                category: "Standard Operating Procedure (SOP) Step 07",
+                title: "Subjective Digital Asthenopia & Symptom Scoring",
+                specs: "Instruments: OSDI Survey (12 items) + 100mm Visual Analogue Scale (VAS) for Eye Strain, Grittiness, and Dryness.",
+                protocol: "1. Subject completes OSDI symptom index immediately post-battery. 2. Rate visual fatigue, blurred vision, headache, and ocular grittiness on 100mm VAS sliders.",
+                mechanism: "Correlates objective physical corneal dry spots and hyperosmolarity with sensory trigeminal nerve pain perception.",
+                relevance: "OSDI score increased from 7.4 to 18.2 points (+145.9%), confirming moderate symptomatic digital eye strain."
+            },
+            step_8: {
+                category: "Standard Operating Procedure (SOP) Step 08",
+                title: "Statistical Data Processing & Hypotheses Testing",
+                specs: "Software: SPSS / R Statistical Engine | Tests: Non-parametric Wilcoxon Signed-Rank Test | Significance Cut-off: P < 0.05.",
+                protocol: "1. Compile matched pre- and post-exposure datasets for N=40 participants. 2. Perform Shapiro-Wilk normality tests. 3. Execute paired Wilcoxon signed-rank test for non-normal distributions. 4. Calculate effect size (r) and linear regression models.",
+                mechanism: "Validates statistical significance of observed physiological parameter shifts.",
+                relevance: "Rejected Null Hypothesis (H0) with high statistical confidence (NIBUT P<0.01, Osmolarity P<0.05, Incomplete Blinks P<0.001)."
+            },
+            mech_1: {
+                category: "Biomechanical Pathway Node 1",
+                title: "VR Headset Hardware & Spatial Visual Demand Interface",
+                specs: "Primary Stressors: Enclosed facial foam seal + High cognitive processing load + Fixed optical plane vergence conflict.",
+                protocol: "Spatial immersion traps facial perspiration and microelectronic heat inside facial cushion while visual search demands continuous focus.",
+                mechanism: "1. Trapped thermal heat elevates periocular ambient temp. 2. Cognitive focus suppresses central blink reflex in brainstem.",
+                relevance: "Triggers dual parallel physiological cascades: thermal meibum melting vs kinematic blink failure."
+            },
+            mech_2: {
+                category: "Biomechanical Pathway Node 2",
+                title: "Thermal Liquefaction vs. Eyelid Kinematic Failure",
+                specs: "Thermal Shift: Cornea +1.5 deg C, Upper Lid +2.1 deg C | Blink Shift: Total blinks 18->7/min, Incomplete blinks 15%->64%.",
+                protocol: "Headset operational heat acts as an unintentional warm compress melting solid meibum into liquid phase (Grade 1.8 -> 2.6). Simultaneously, incomplete blinks fail to sweep lipid across cornea.",
+                mechanism: "Meibum melts, but without complete eyelid closure, tears are left unsealed at inferior corneal apex.",
+                relevance: "The 'Thermodynamic Paradox': Lipid layer appears thicker, but fails functionally due to incomplete lid closure."
+            },
+            mech_3: {
+                category: "Biomechanical Pathway Node 3",
+                title: "Accelerated Evaporation, Hyperosmolarity & Asthenopia",
+                specs: "Evaporative Shifts: NIBUT 12.4s -> 8.7s | Osmolarity 296 -> 305 mOsm/L | OSDI 7.4 -> 18.2 Points.",
+                protocol: "Uncovered aqueous layer evaporates rapidly off central cornea. Solutes concentrate, elevating osmolarity and stressing corneal epithelial glycocalyx.",
+                mechanism: "1. Localized dry spots expose sensory nerve endings. 2. Trigeminal nerve pain signals trigger visual asthenopia.",
+                relevance: "Final clinical state: Evaporative dry eye strain and digital asthenopia induced by spatial computing."
+            }
+        };
+
+        function openToolModal(key) {
+            const data = toolDetailsData[key];
+            if (!data) return;
+            document.getElementById('modalCategory').innerText = data.category;
+            document.getElementById('modalTitle').innerText = data.title;
+            document.getElementById('modalSpecs').innerText = data.specs;
+            document.getElementById('modalProtocol').innerText = data.protocol;
+            document.getElementById('modalMechanism').innerText = data.mechanism;
+            document.getElementById('modalRelevance').innerText = data.relevance;
+            document.getElementById('toolModal').classList.remove('hidden');
+        }
+
+        function closeToolModal() {
+            document.getElementById('toolModal').classList.add('hidden');
+        }
+
+        document.getElementById('toolModal').addEventListener('click', function(e) {
+            if (e.target === this) closeToolModal();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeToolModal();
+        });
+
+        function wrapLabel(str, maxLen = 16) {
+            if (typeof str !== 'string' || str.length <= maxLen) return str;
+            const words = str.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + ' ' + word).trim().length > maxLen) {
+                    if (currentLine) lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            });
+            if (currentLine) lines.push(currentLine.trim());
+            return lines;
+        }
+
+        const sharedTooltipConfig = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    } else {
+                        return label;
+                    }
+                }
+            }
+        };
+
+        function updateInspector(title, metricStr) {
+            document.getElementById('inspectorTitle').innerText = title;
+            document.getElementById('inspectorMetrics').innerHTML = metricStr;
+        }
+
+        const ctxParadox = document.getElementById('chartParadox').getContext('2d');
+        const rawLabelsParadox = ['Pre-VR Baseline', 'Post-VR Exposure (40m)'];
+        const wrappedLabelsParadox = rawLabelsParadox.map(l => wrapLabel(l));
+
+        const chartParadoxObj = new Chart(ctxParadox, {
+            type: 'bar',
+            data: {
+                labels: wrappedLabelsParadox,
+                datasets: [
+                    {
+                        label: wrapLabel('NIBUT Breakup Time (s)'),
+                        data: [12.4, 8.7],
+                        backgroundColor: '#f43f5e',
+                        borderColor: '#e11d48',
+                        borderWidth: 1.5,
+                        yAxisID: 'yNibut',
+                        borderRadius: 6
+                    },
+                    {
+                        label: wrapLabel('Lipid Thickness (1-5 Grade)'),
+                        data: [1.8, 2.6],
+                        backgroundColor: '#0d9488',
+                        borderColor: '#0f766e',
+                        borderWidth: 1.5,
+                        yAxisID: 'yLipid',
+                        borderRadius: 6
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                onClick: (evt, activeEls) => {
+                    if (activeEls.length > 0) {
+                        const index = activeEls[0].index;
+                        const datasetIdx = activeEls[0].datasetIndex;
+                        if (index === 0) {
+                            updateInspector("Baseline State Selected", "<span class='text-rose-400 font-bold'>NIBUT: 12.4s ± 2.8s</span> | <span class='text-teal-400 font-bold'>Lipid: Grade 1.8 ± 0.7</span> | Status: Healthy Tear Film Equilibrium");
+                        } else {
+                            updateInspector("Post-VR (40m) State Selected", "<span class='text-rose-400 font-bold'>NIBUT: 8.7s ± 3.1s (-29.8%)</span> | <span class='text-teal-400 font-bold'>Lipid: Grade 2.6 ± 0.6 (+44.4%)</span> | <span class='text-amber-300 font-bold'>Wilcoxon P < 0.01</span>");
+                        }
+                    }
+                },
+                plugins: {
+                    tooltip: sharedTooltipConfig,
+                    legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } }
+                },
+                scales: {
+                    yNibut: {
+                        type: 'linear',
+                        position: 'left',
+                        title: { display: true, text: 'NIBUT (seconds)', font: { size: 11, weight: 'bold' } },
+                        min: 0,
+                        max: 16,
+                        grid: { color: '#f1f5f9' }
+                    },
+                    yLipid: {
+                        type: 'linear',
+                        position: 'right',
+                        title: { display: true, text: 'Lipid Thickness Grade', font: { size: 11, weight: 'bold' } },
+                        min: 0,
+                        max: 5,
+                        grid: { drawOnChartArea: false }
+                    },
+                    x: { grid: { display: false } }
+                }
+            }
+        });
+
+        const ctxOsm = document.getElementById('chartOsmolarity').getContext('2d');
+        const rawOsmBins = ['280-289 mOsm', '290-299 mOsm', '300-309 mOsm', '310-319 mOsm', '320+ mOsm'];
+        const wrappedOsmBins = rawOsmBins.map(b => wrapLabel(b));
+
+        new Chart(ctxOsm, {
+            type: 'line',
+            data: {
+                labels: wrappedOsmBins,
+                datasets: [
+                    {
+                        label: wrapLabel('Pre-VR Population Baseline'),
+                        data: [4, 26, 8, 2, 0],
+                        borderColor: '#0284c7',
+                        backgroundColor: 'rgba(2, 132, 199, 0.15)',
+                        fill: true,
+                        tension: 0.4,
+                        pointRadius: 5,
+                        pointHoverRadius: 8
+                    },
+                    {
+                        label: wrapLabel('Post-VR Exposure Distribution'),
+                        data: [0, 9, 21, 8, 2],
+                        borderColor: '#f59e0b',
+                        backgroundColor: 'rgba(245, 158, 11, 0.15)',
+                        fill: true,
+                        tension: 0.4,
+                        pointRadius: 5,
+                        pointHoverRadius: 8
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                onClick: (evt, activeEls) => {
+                    if (activeEls.length > 0) {
+                        const index = activeEls[0].index;
+                        const binName = rawOsmBins[index];
+                        updateInspector("Osmolarity Interval: " + binName, "<span class='text-sky-400 font-bold'>Pre-VR Count: " + [4, 26, 8, 2, 0][index] + "</span> | <span class='text-amber-400 font-bold'>Post-VR Count: " + [0, 9, 21, 8, 2][index] + "</span> | Mean Shift: 296 -> 305 mOsm/L (P < 0.05)");
+                    }
+                },
+                plugins: {
+                    tooltip: sharedTooltipConfig,
+                    legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } }
+                },
+                scales: {
+                    y: {
+                        title: { display: true, text: 'Participant Count (N=40)', font: { size: 11 } },
+                        min: 0,
+                        max: 30,
+                        grid: { color: '#f1f5f9' }
+                    },
+                    x: { grid: { display: false } }
+                }
+            }
+        });
+
+        const ctxRadar = document.getElementById('chartRadar').getContext('2d');
+        const rawRadarMetrics = ['Corneal Temp', 'Upper Lid Temp', 'Lipid Thickness', 'NIBUT Stability', 'Osmolarity Stress', 'OSDI Symptom Score'];
+        const wrappedRadarMetrics = rawRadarMetrics.map(m => wrapLabel(m));
+
+        new Chart(ctxRadar, {
+            type: 'radar',
+            data: {
+                labels: wrappedRadarMetrics,
+                datasets: [
+                    {
+                        label: wrapLabel('Pre-VR Baseline State'),
+                        data: [60, 58, 36, 82, 30, 15],
+                        borderColor: '#0284c7',
+                        backgroundColor: 'rgba(2, 132, 199, 0.2)',
+                        pointBackgroundColor: '#0284c7',
+                        pointRadius: 4
+                    },
+                    {
+                        label: wrapLabel('Post-VR Exposure State'),
+                        data: [82, 85, 52, 58, 62, 58],
+                        borderColor: '#f43f5e',
+                        backgroundColor: 'rgba(244, 63, 94, 0.2)',
+                        pointBackgroundColor: '#f43f5e',
+                        pointRadius: 4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                onClick: (evt, activeEls) => {
+                    if (activeEls.length > 0) {
+                        const index = activeEls[0].index;
+                        const metricName = rawRadarMetrics[index];
+                        updateInspector("Biomarker Dimension: " + metricName, "<span class='text-sky-400 font-bold'>Baseline Score: " + [60, 58, 36, 82, 30, 15][index] + "%</span> | <span class='text-rose-400 font-bold'>Post-VR Score: " + [82, 85, 52, 58, 62, 58][index] + "%</span> | Significant Shift Recorded");
+                    }
+                },
+                plugins: {
+                    tooltip: sharedTooltipConfig,
+                    legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } }
+                },
+                scales: {
+                    r: {
+                        angleLines: { color: '#e2e8f0' },
+                        grid: { color: '#e2e8f0' },
+                        suggestedMin: 0,
+                        suggestedMax: 100,
+                        ticks: { display: false }
+                    }
+                }
+            }
+        });
+
+        const ctxBlink = document.getElementById('chartBlinkKinematics').getContext('2d');
+        const rawTimePoints = ['Baseline 0m', '10 Minutes', '20 Minutes', '30 Minutes', '40 Minutes'];
+        const wrappedTimePoints = rawTimePoints.map(t => wrapLabel(t));
+
+        new Chart(ctxBlink, {
+            type: 'line',
+            data: {
+                labels: wrappedTimePoints,
+                datasets: [
+                    {
+                        label: wrapLabel('Total Blink Rate (blinks/min)'),
+                        data: [18, 11, 9, 8, 7],
+                        borderColor: '#0d9488',
+                        backgroundColor: '#0d9488',
+                        yAxisID: 'yBlink',
+                        tension: 0.2,
+                        pointRadius: 5,
+                        pointHoverRadius: 8
+                    },
+                    {
+                        label: wrapLabel('Incomplete Blink Ratio (%)'),
+                        data: [15, 32, 48, 57, 64],
+                        borderColor: '#ef4444',
+                        backgroundColor: '#ef4444',
+                        yAxisID: 'yIncomplete',
+                        tension: 0.2,
+                        pointRadius: 5,
+                        pointHoverRadius: 8
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                onClick: (evt, activeEls) => {
+                    if (activeEls.length > 0) {
+                        const index = activeEls[0].index;
+                        const timePt = rawTimePoints[index];
+                        updateInspector("Kinematics at " + timePt, "<span class='text-teal-400 font-bold'>Total Blinks: " + [18, 11, 9, 8, 7][index] + " blinks/min</span> | <span class='text-rose-400 font-bold'>Incomplete Ratio: " + [15, 32, 48, 57, 64][index] + "%</span> | Cognitive Strain Peak");
+                    }
+                },
+                plugins: {
+                    tooltip: sharedTooltipConfig,
+                    legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } }
+                },
+                scales: {
+                    yBlink: {
+                        type: 'linear',
+                        position: 'left',
+                        title: { display: true, text: 'Blinks / Minute', font: { size: 11 } },
+                        min: 0,
+                        max: 25,
+                        grid: { color: '#f1f5f9' }
+                    },
+                    yIncomplete: {
+                        type: 'linear',
+                        position: 'right',
+                        title: { display: true, text: 'Incomplete Blinks (%)', font: { size: 11 } },
+                        min: 0,
+                        max: 100,
+                        grid: { drawOnChartArea: false }
+                    },
+                    x: { grid: { display: false } }
+                }
+            }
+        });
+
+        const slider = document.getElementById('simTimeSlider');
+        const sliderValText = document.getElementById('sliderValText');
+        const simTemp = document.getElementById('simTemp');
+        const simLipid = document.getElementById('simLipid');
+        const simNibut = document.getElementById('simNibut');
+        const simOsm = document.getElementById('simOsm');
+        const simStatusText = document.getElementById('simStatusText');
+        const simRiskBadge = document.getElementById('simRiskBadge');
+        const simBlinkRatio = document.getElementById('simBlinkRatio');
+
+        slider.addEventListener('input', function() {
+            const mins = parseInt(this.value);
+            sliderValText.innerText = mins + ' Minutes';
+
+            const calcTemp = (34.2 + (mins / 40) * 1.5).toFixed(1);
+            const calcLipid = (1.8 + (mins / 40) * 0.8).toFixed(1);
+            const calcNibut = (12.4 - (mins / 40) * 3.7).toFixed(1);
+            const calcOsm = Math.round(296 + (mins / 40) * 9.0);
+            const calcIncomplete = Math.round(15 + (mins / 40) * 49);
+
+            simTemp.innerHTML = calcTemp + ' &deg;C';
+            simLipid.innerText = 'Grade ' + calcLipid;
+            simNibut.innerText = calcNibut + ' s';
+            simOsm.innerText = calcOsm + ' mOsm/L';
+            simBlinkRatio.innerText = calcIncomplete + '% Incomplete';
+
+            if (mins < 15) {
+                simStatusText.innerText = 'Initial exposure phase. Physiological buffering active with minimal tear film destabilization. Corneal temperature rising gradually.';
+                simRiskBadge.innerText = 'LOW RISK';
+                simRiskBadge.className = 'inline-block mt-2 px-3 py-1 bg-teal-500/20 text-teal-300 border border-teal-500/40 rounded-full text-xs font-bold';
+            } else if (mins < 30) {
+                simStatusText.innerText = 'Moderate exposure phase. Periocular microclimatic warming begins liquefying meibum. Cognitive blink suppression creates early tear breakup spots.';
+                simRiskBadge.innerText = 'MODERATE RISK';
+                simRiskBadge.className = 'inline-block mt-2 px-3 py-1 bg-amber-500/20 text-amber-300 border border-amber-500/40 rounded-full text-xs font-bold';
+            } else {
+                simStatusText.innerText = 'Sustained exposure phase. Thermal meibum liquefaction is maximal (Grade ' + calcLipid + '), but NIBUT drops below pathological line (' + calcNibut + 's) due to severe incomplete blink ratio (' + calcIncomplete + '%).';
+                simRiskBadge.innerText = 'HIGH RISK';
+                simRiskBadge.className = 'inline-block mt-2 px-3 py-1 bg-rose-500/20 text-rose-300 border border-rose-500/40 rounded-full text-xs font-bold';
+            }
+        });
+    </script>
+</body>
+</html>
